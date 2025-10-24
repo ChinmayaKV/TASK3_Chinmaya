@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 252 35% 15%;
+    --foreground: 0 0% 100%;
+
+    --card: 252 30% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 252 30% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 265 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 252 25% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 252 20% 22%;
+    --muted-foreground: 252 10% 65%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 252 35% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 252 20% 30%;
+    --input: 252 20% 30%;
+    --ring: 265 80% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 252 35% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 265 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 252 25% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 252 20% 25%;
+    --sidebar-ring: 265 80% 60%;
+    
+    --chart-1: 265 80% 60%;
+    --chart-2: 45 100% 60%;
+    --chart-3: 180 60% 50%;
+    --chart-4: 300 70% 60%;
+    --chart-5: 30 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
